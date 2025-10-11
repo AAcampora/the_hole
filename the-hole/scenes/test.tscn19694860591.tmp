@@ -28,32 +28,19 @@ offset_top = 606.0
 offset_right = 906.0
 offset_bottom = 637.0
 
-[node name="Container" type="Container" parent="Node2D/CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D/CanvasLayer" node_paths=PackedStringArray("camera_01")]
+offset_left = 774.00006
+offset_top = 13.999999
+offset_right = 1286.0
+offset_bottom = 526.0
+scale = Vector2(0.7200012, 0.53690064)
 script = ExtResource("2_bl13t")
+camera_01 = NodePath("SubViewport/camera_1")
 
-[node name="SubViewportContainer_1" type="SubViewportContainer" parent="Node2D/CanvasLayer/Container"]
-visible = false
-layout_mode = 2
+[node name="SubViewport" type="SubViewport" parent="Node2D/CanvasLayer/SubViewportContainer"]
 
-[node name="SubViewport" type="SubViewport" parent="Node2D/CanvasLayer/Container/SubViewportContainer_1"]
-handle_input_locally = false
-render_target_update_mode = 0
-
-[node name="Camera3D" type="Camera3D" parent="Node2D/CanvasLayer/Container/SubViewportContainer_1/SubViewport"]
-transform = Transform3D(0.580504, 0.38594222, -0.7169823, 0, 0.88053524, 0.47398064, 0.8142574, -0.27514765, 0.51115423, -1.8481966, 2.4659534, 1.7267339)
-
-[node name="SubViewportContainer_2" type="SubViewportContainer" parent="Node2D/CanvasLayer/Container"]
-visible = false
-layout_mode = 2
-
-[node name="SubViewport" type="SubViewport" parent="Node2D/CanvasLayer/Container/SubViewportContainer_2"]
-handle_input_locally = false
-render_target_update_mode = 0
-
-[node name="Camera3D" type="Camera3D" parent="Node2D/CanvasLayer/Container/SubViewportContainer_2/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 0.88053524, 0.47398064, 0, -0.47398064, 0.88053524, 0, 2.4659534, 1.7267339)
+[node name="camera_1" type="Camera3D" parent="Node2D/CanvasLayer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.775628, 0.6311904, 0, -0.6311904, 0.775628, 0, 2.6899798, 1.7013433)
 
 [node name="Node3D" type="Node3D" parent="."]
 

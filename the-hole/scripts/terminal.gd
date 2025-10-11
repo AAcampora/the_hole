@@ -4,49 +4,16 @@ class_name Terminal
 @export var input_text : LineEdit;
 @export var output_text : TextEdit;
 
-var prompt = "c://users/warden5458/> "
+@onready var surfeed: SURFEED = $CanvasLayer/Container;
+
 var caret_position : int
 var command_history = []
 var command_history_index: int = 0
-
-var line_separator = "/------------------------------------------------------------------------------------------------------/"
-
-var commands = {
-	"SURFEED": {
-		"desc": "Access live or archived surveillance feeds.",
-		"usage": "SURFEED [CAM_ID]",
-		"example": "SURFEED 02"
-	},
-	"GATECTRL": {
-		"desc": "Control perimeter gates.",
-		"usage": "GATECTRL [OPEN|CLOSE|STATUS] [ID]",
-		"example": "GATECTRL OPEN A2"
-	},
-	"GASCTL": {
-		"desc": "Regulate gas flow within tunnels 1–5.",
-		"usage": "GASCTL [ENABLE|DISABLE] [TUNNEL_ID]",
-		"example": "GASCTL ENABLE 3"
-	},
-	"POWCTRL": {
-		"desc": "Manage remote power nodes.",
-		"usage": "POWCTRL [ON|OFF|REBOOT] [NODE]",
-		"example": "POWCTRL REBOOT NORTH_SUBGRID"
-	},
-	"EBLK": {
-		"desc": "Activate emergency bulkhead lock systems.",
-		"usage": "EBLK [ARM|DISARM|STATUS]",
-		"example": "EBLK ARM"
-	},
-	"CLEAR": {
-		"desc": "clear the console",
-		"usage": "clear",
-		"example": "clear"
-	}
-}
+const Texts = preload("res://Data/translations/terminal_text_en.gd")
 
 func _ready():
-	input_text.text = prompt
-	caret_position = prompt.length();
+	input_text.text = Texts.PROMPT
+	caret_position = Texts.PROMPT.length();
 	
 	input_text.connect("text_submitted", Callable(self, "_on_text_submitted"))
 	input_text.connect("text_changed", Callable(self, "_on_text_changed"))
@@ -55,10 +22,10 @@ func _on_text_changed(new_text: String) -> void:
 	caret_position = new_text.length()
 	
 func _on_text_submitted(new_text: String) -> void:
-	var command = new_text.substr(prompt.length()).strip_edges()
-	input_text.text = prompt;
+	var command = new_text.substr(Texts.PROMPT.length()).strip_edges()
+	input_text.text = Texts.PROMPT;
 	process_command(command)
-	if command != command_history.front():
+	if command_history.is_empty() or command != command_history.front():
 		command_history.push_front(command)
 
 func process_command(cmd: String):
@@ -67,20 +34,21 @@ func process_command(cmd: String):
 	var flag = parts[1].to_upper() if parts.size() > 1  else ""
 	match base:
 		"HELP":
-			if flag == "-VERBOSE":
-				print_verbose_help()
-			if flag == "-V":
+			if flag in ["-V", "-VERBOSE"]: 
 				print_verbose_help()
 			else:
 				print_basic_help()
 		"CLEAR":
 			clear_console()
-		
+		"SURFEED":
+			activate_surveliance_feed(flag)
+			
 		_:
-			if flag == "--HELP":
-				print_command_help(base)
+			if Texts.COMMANDS.has(base):
+				if flag == "--HELP":
+					print_command_help(base)
 			else:
-				print_output("Unknown command. Type HELP for list of commands.")
+				print_output(Texts.UKNOWN_COMMAND)
 
 #func _on_text_changed(new_text: String) -> void:
 	#caret_position = input_text.text.length()
@@ -89,56 +57,58 @@ func clear_console():
 	output_text.text =""
 	output_text.scroll_vertical = 0
 	
+func activate_surveliance_feed(camera_ID: String):
+	surfeed._activate_feed(camera_ID)
+	
+	
 func print_basic_help():
-	print_output("COMMAND INDEX - WARDEN OPS TERMINAL")
-	print_output("FOR MORE INFORMATION, USE COMMAND: { HELP -VERBOSE } OR { HELP -V }")
-	for k in commands.keys():
-		print_output("%-12s | %s" % [k, commands[k]["desc"]])
+	print_output(Texts.COMAND_INDEX_GREETING)
+	print_output(Texts.COMMAND_INDEX_MORE_INFO)
+	for k in Texts.COMMANDS.keys():
+		print_output("%-12s | %s" % [k, Texts.COMMANDS[k]["desc"]])
+	print_output(Texts.LINE_SEPARATOR)
 	
 func print_verbose_help():
-	print_output(line_separator)
-	print_output("COMMAND INDEX - WARDEN OPS TERMINAL (VERBOSE MODE)\n>")
-	for k in commands.keys():
-		var cmd = commands[k]
+	print_output(Texts.COMAND_INDEX_GREETING_VERBOSE)
+	for k in Texts.COMMANDS.keys():
+		var cmd = Texts.COMMANDS[k]
 		print_output(k)
 		print_output(cmd["desc"])
-		print_output("Usage: " + cmd["usage"])
-		print_output("Example: " + cmd["example"])
-		print_output(line_separator)
+		print_output(Texts.HELP_SECTION_P1 + cmd["usage"])
+		print_output(Texts.HELP_SECTION_P2 + cmd["example"])
+		print_output(Texts.LINE_SEPARATOR)
 	
 func print_command_help(command: String): 
-	print_output("COMMAND INDEX - WARDEN OPS TERMINAL - DEFINE COMMAND: %s\n>" %[command])
-	var cmd = commands[command]
+	print_output(Texts.COMMAND_INDEX_DEFINE %[command])
+	var cmd = Texts.COMMANDS[command]
 	print_output(cmd["desc"])
-	print_output("Usage: " + cmd["usage"])
-	print_output("Example: " + cmd["example"])
-	print_output(line_separator)
+	print_output(Texts.HELP_SECTION_P1 + cmd["usage"])
+	print_output(Texts.HELP_SECTION_P2 + cmd["example"])
+	print_output(Texts.LINE_SEPARATOR)
 			
 func print_output(text: String):
 	output_text.text += ">    " + text + "\n"
 	output_text.scroll_vertical += output_text.get_line_count()
 	
 func reset_input():
-	input_text.text = prompt + " "
-	input_text.caret_column = prompt.length() + 1
+	input_text.text = Texts.PROMPT + " "
+	input_text.caret_column = Texts.PROMPT.length() + 1
 	
 func scroll_history(is_down: bool):
-	if command_history.size() != 0:
-		var history = command_history[command_history_index]
-		var history_size =  command_history.size() -1
-		input_text.text = prompt + " " + history
-		
-		if is_down:
-			command_history_index = command_history_index - 1 if command_history_index > history_size else 0
-		else:
-			command_history_index = command_history_index + 1 if command_history_index <  history_size else history_size
+	if command_history.is_empty():
+		return
 	
-	print(input_text.caret_column)	
+	command_history_index = clamp(
+		command_history_index + (1 if not is_down else -1),
+		0, command_history.size() - 1
+	)
+	input_text.text = Texts.PROMPT + command_history[command_history_index]
+	input_text.caret_column = input_text.text.length()
 
 func _input(event):
 	# Prevent backspace deleting the prompt
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_BACKSPACE and caret_position <= prompt.length():
+		if event.keycode == KEY_BACKSPACE and caret_position <= Texts.PROMPT.length():
 			reset_input()
 		if event.keycode == KEY_UP:
 			scroll_history(false)

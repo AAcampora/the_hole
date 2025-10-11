@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://ptloc8rdag8l"]
+
+[ext_resource type="Script" uid="uid://c5q333tiuvlha" path="res://scripts/terminal.gd" id="1_errlg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_errlg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bl13t"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("input_text", "output_text")]
+script = ExtResource("1_errlg")
+input_text = NodePath("CanvasLayer/input")
+output_text = NodePath("CanvasLayer/output")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+
+[node name="output" type="TextEdit" parent="Node2D/CanvasLayer"]
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 904.0
+offset_bottom = 600.0
+
+[node name="input" type="LineEdit" parent="Node2D/CanvasLayer"]
+offset_left = 10.0
+offset_top = 606.0
+offset_right = 906.0
+offset_bottom = 637.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D/CanvasLayer"]
+
+[node name="Camera3D" type="Camera3D" parent="Node2D/CanvasLayer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.775628, 0.6311904, 0, -0.6311904, 0.775628, 0, 2.6899798, 1.7013433)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17194104, 0)
+mesh = SubResource("PlaneMesh_errlg")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2547741, 0)
+mesh = SubResource("CapsuleMesh_bl13t")
