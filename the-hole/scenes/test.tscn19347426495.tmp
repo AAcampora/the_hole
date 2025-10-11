@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ptloc8rdag8l"]
+
+[ext_resource type="Script" uid="uid://c5q333tiuvlha" path="res://scripts/terminal.gd" id="1_errlg"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("input_text", "output_text")]
+script = ExtResource("1_errlg")
+input_text = NodePath("CanvasLayer/input")
+output_text = NodePath("CanvasLayer/output")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+
+[node name="output" type="TextEdit" parent="Node2D/CanvasLayer"]
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 904.0
+offset_bottom = 600.0
+
+[node name="input" type="LineEdit" parent="Node2D/CanvasLayer"]
+offset_left = 10.0
+offset_top = 606.0
+offset_right = 906.0
+offset_bottom = 637.0
