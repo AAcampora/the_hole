@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://7q0rknprfbt8"]
+
+[ext_resource type="Script" uid="uid://c5q333tiuvlha" path="res://scripts/terminal.gd" id="1_ywnc0"]
+[ext_resource type="Script" uid="uid://bmwv3mdol5x67" path="res://scripts/SURFEED.gd" id="2_nac2b"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("input_text", "output_text")]
+script = ExtResource("1_ywnc0")
+input_text = NodePath("CanvasLayer/input")
+output_text = NodePath("CanvasLayer/output")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="output" type="TextEdit" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 904.0
+offset_bottom = 600.0
+
+[node name="input" type="LineEdit" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 606.0
+offset_right = 906.0
+offset_bottom = 637.0
+
+[node name="Container" type="Container" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 637.0
+script = ExtResource("2_nac2b")
+
+[node name="SubViewportContainer_1" type="SubViewportContainer" parent="CanvasLayer/Container"]
+visible = false
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Container/SubViewportContainer_1"]
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/Container/SubViewportContainer_1/SubViewport"]
+transform = Transform3D(0.580504, 0.38594222, -0.7169823, 0, 0.88053524, 0.47398064, 0.8142574, -0.27514765, 0.51115423, -1.8481966, 2.4659534, 1.7267339)
+
+[node name="SubViewportContainer_2" type="SubViewportContainer" parent="CanvasLayer/Container"]
+visible = false
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Container/SubViewportContainer_2"]
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/Container/SubViewportContainer_2/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.88053524, 0.47398064, 0, -0.47398064, 0.88053524, 0, 2.4659534, 1.7267339)
