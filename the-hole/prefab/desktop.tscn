@@ -1,0 +1,317 @@
+[gd_scene load_steps=32 format=3 uid="uid://bbmwpa6dhhijf"]
+
+[ext_resource type="Script" uid="uid://c07vyu67iec4" path="res://scripts/desktop.gd" id="1_pi3g1"]
+[ext_resource type="Texture2D" uid="uid://cv7v7egblyhmh" path="res://textures/bg.png" id="2_jgusp"]
+[ext_resource type="Texture2D" uid="uid://cr7lny52gppfk" path="res://textures/terminal.png" id="3_i1gb8"]
+[ext_resource type="FontFile" uid="uid://d0v37oaofacu0" path="res://fonts/aurora/aurora-24.ttf" id="4_w6h45"]
+[ext_resource type="Texture2D" uid="uid://bjkvhlf7jthpm" path="res://textures/wardenOS.png" id="5_0ndqd"]
+[ext_resource type="Texture2D" uid="uid://cp08qad4ujsjh" path="res://textures/drone.png" id="6_1kfbj"]
+[ext_resource type="Texture2D" uid="uid://b2g3l61yl1v32" path="res://textures/folder.png" id="7_r4al1"]
+[ext_resource type="Texture2D" uid="uid://d2yju2tacuar1" path="res://textures/files.png" id="8_sja2m"]
+[ext_resource type="Texture2D" uid="uid://dhc71uxrypycr" path="res://textures/surfeed.png" id="9_idj0c"]
+[ext_resource type="Texture2D" uid="uid://coppy2vy15adv" path="res://textures/security.png" id="10_vvjf2"]
+[ext_resource type="Texture2D" uid="uid://caosaxc1feiuo" path="res://textures/HelionOS.png" id="11_covie"]
+[ext_resource type="Texture2D" uid="uid://c7l0t55mvugvq" path="res://textures/button.png" id="12_u17rb"]
+[ext_resource type="FontFile" uid="uid://cp7h7etydkl04" path="res://fonts/VCR_OSD_MONO/VCR_OSD_MONO_1.001.ttf" id="13_jgusp"]
+[ext_resource type="Script" uid="uid://di8lau3md3pr5" path="res://scripts/taskbar.gd" id="14_w6h45"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed6rk"]
+texture = ExtResource("3_i1gb8")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w58xd"]
+texture = ExtResource("3_i1gb8")
+modulate_color = Color(0.32172796, 0.32172796, 0.32172796, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yu0yj"]
+texture = ExtResource("5_0ndqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6f7av"]
+texture = ExtResource("5_0ndqd")
+modulate_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ye0qy"]
+texture = ExtResource("6_1kfbj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01a23"]
+texture = ExtResource("6_1kfbj")
+modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8dgl"]
+texture = ExtResource("7_r4al1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nx3uv"]
+texture = ExtResource("7_r4al1")
+modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_majww"]
+texture = ExtResource("8_sja2m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vuxbm"]
+texture = ExtResource("8_sja2m")
+modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wiyix"]
+texture = ExtResource("9_idj0c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqlls"]
+texture = ExtResource("9_idj0c")
+modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4aos"]
+texture = ExtResource("10_vvjf2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbskp"]
+texture = ExtResource("10_vvjf2")
+modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0l4i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uh226"]
+texture = ExtResource("12_u17rb")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylx5y"]
+texture = ExtResource("12_u17rb")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[node name="Desktop" type="Control" node_paths=PackedStringArray("panel_container", "creatures_button", "handbook_button", "taskBar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7199988, 1.5600002)
+script = ExtResource("1_pi3g1")
+panel_container = NodePath("BG/ActivePanels")
+creatures_button = NodePath("BG/creatures")
+handbook_button = NodePath("BG/handbook")
+taskBar = NodePath("Panel/TaskBar")
+
+[node name="BG" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_jgusp")
+expand_mode = 2
+
+[node name="terminal" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 421.0
+offset_right = 119.0
+offset_bottom = 499.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ed6rk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w58xd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ed6rk")
+
+[node name="Label" type="Label" parent="BG/terminal"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "Terminal.exe"
+
+[node name="warden_os" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 304.0
+offset_right = 119.0
+offset_bottom = 382.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_yu0yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6f7av")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_yu0yj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yu0yj")
+
+[node name="Label" type="Label" parent="BG/warden_os"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 85.0
+offset_right = 109.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "WardenOS.exe"
+horizontal_alignment = 1
+
+[node name="overseer" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 181.0
+offset_top = 312.0
+offset_right = 259.0
+offset_bottom = 390.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ye0qy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_01a23")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ye0qy")
+
+[node name="Label" type="Label" parent="BG/overseer"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "Overseer.exe"
+
+[node name="creatures" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 181.0
+offset_top = 31.0
+offset_right = 259.0
+offset_bottom = 109.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_r8dgl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nx3uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r8dgl")
+
+[node name="Label" type="Label" parent="BG/creatures"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "Creatures"
+horizontal_alignment = 1
+
+[node name="handbook" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 182.0
+offset_top = 160.0
+offset_right = 260.0
+offset_bottom = 238.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_majww")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vuxbm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_majww")
+
+[node name="Label" type="Label" parent="BG/handbook"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "Warden 
+Handbook"
+horizontal_alignment = 1
+
+[node name="surfeed" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 160.0
+offset_right = 119.0
+offset_bottom = 238.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_wiyix")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bqlls")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wiyix")
+
+[node name="Label" type="Label" parent="BG/surfeed"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "Surfeed.exe"
+horizontal_alignment = 1
+
+[node name="security" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 31.0
+offset_right = 119.0
+offset_bottom = 109.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_e4aos")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sbskp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e4aos")
+
+[node name="Label" type="Label" parent="BG/security"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 78.0
+offset_right = 104.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 14
+text = "SECURITY.exe"
+horizontal_alignment = 1
+
+[node name="ActivePanels" type="Control" parent="BG"]
+anchors_preset = 0
+offset_left = 300.0002
+offset_right = 1152.0002
+offset_bottom = 609.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 609.0
+offset_right = 1151.745
+offset_bottom = 648.99115
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0l4i")
+
+[node name="start" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_w6h45")
+theme_override_font_sizes/font_size = 16
+theme_override_icons/icon = ExtResource("11_covie")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh226")
+text = "Start"
+icon = ExtResource("11_covie")
+
+[node name="timebox" type="Panel" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1151.745
+offset_top = 39.71788
+offset_right = 1244.559
+offset_bottom = 79.71788
+rotation = -3.1415927
+theme_override_styles/panel = SubResource("StyleBoxTexture_ylx5y")
+
+[node name="Label" type="Label" parent="Panel/timebox"]
+layout_mode = 0
+offset_left = 89.53496
+offset_top = 34.615387
+offset_right = 183.53497
+offset_bottom = 64.61539
+rotation = 3.1415927
+theme_override_fonts/font = ExtResource("13_jgusp")
+text = "12:OO PM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskBar" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 119.18613
+offset_top = -0.025705189
+offset_right = 1051.1635
+offset_bottom = 39.974297
+script = ExtResource("14_w6h45")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv7v7egblyhmh"
-path="res://.godot/imported/bg.png-a4a00e8c07c57659a37efa9516c17c26.ctex"
+uid="uid://c43hllu7imwxy"
+path="res://.godot/imported/tab_button.png-692f06a09520e529006a32e545e8df82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/bg.png"
-dest_files=["res://.godot/imported/bg.png-a4a00e8c07c57659a37efa9516c17c26.ctex"]
+source_file="res://textures/tab_button.png"
+dest_files=["res://.godot/imported/tab_button.png-692f06a09520e529006a32e545e8df82.ctex"]
 
 [params]
 

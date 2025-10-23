@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://3gtty2wk8aev"]
+[gd_scene load_steps=14 format=3 uid="uid://3gtty2wk8aev"]
 
-[ext_resource type="Script" uid="uid://dvec1d7h4rsye" path="res://scripts/close_window.gd" id="1_mwf23"]
+[ext_resource type="Script" uid="uid://dvec1d7h4rsye" path="res://scripts/window.gd" id="1_mwf23"]
 [ext_resource type="Texture2D" uid="uid://dqrdf13558ewj" path="res://textures/close_button.png" id="2_h0wjl"]
 [ext_resource type="Texture2D" uid="uid://b2g3l61yl1v32" path="res://textures/folder.png" id="3_evsuw"]
+[ext_resource type="Texture2D" uid="uid://c43hllu7imwxy" path="res://textures/tab_button.png" id="3_h0wjl"]
 [ext_resource type="FontFile" uid="uid://d0v37oaofacu0" path="res://fonts/aurora/aurora-24.ttf" id="4_deyi7"]
 [ext_resource type="Texture2D" uid="uid://d2yju2tacuar1" path="res://textures/files.png" id="5_hn8wl"]
 
@@ -13,6 +14,28 @@ texture = ExtResource("2_h0wjl")
 texture = ExtResource("2_h0wjl")
 modulate_color = Color(0.32156864, 0.32156864, 0.32156864, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evsuw"]
+texture = ExtResource("3_h0wjl")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0wjl"]
+texture = ExtResource("3_h0wjl")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+modulate_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_deyi7"]
+texture = ExtResource("3_h0wjl")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_majww"]
 texture = ExtResource("5_hn8wl")
 
@@ -20,57 +43,34 @@ texture = ExtResource("5_hn8wl")
 texture = ExtResource("5_hn8wl")
 modulate_color = Color(0.31764707, 0.31764707, 0.31764707, 1)
 
-[node name="window_creatures" type="Panel" node_paths=PackedStringArray("button")]
-visible = false
+[node name="window_creatures" type="Panel" node_paths=PackedStringArray("close_button", "minimise_button")]
 offset_left = 318.0
 offset_top = 92.0
 offset_right = 938.76245
 offset_bottom = 533.0
 script = ExtResource("1_mwf23")
-button = NodePath("BG/ColorRect5/Button")
+close_button = NodePath("TopBar/ColorRect5/close_button")
+minimise_button = NodePath("TopBar/ColorRect5/tab_button")
+window_title = "Creatures"
+window_icon = ExtResource("3_evsuw")
 
-[node name="BG" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 621.0
-offset_bottom = 439.0
-
-[node name="ColorRect3" type="ColorRect" parent="BG"]
-layout_mode = 0
-offset_left = 613.0
-offset_top = 40.0
-offset_right = 621.0
-offset_bottom = 407.0
-color = Color(0.6, 0.6, 0.6, 1)
-
-[node name="ColorRect" type="ColorRect" parent="BG"]
+[node name="TopBar" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 621.0
 offset_bottom = 68.0
+mouse_filter = 1
 color = Color(0.6, 0.6, 0.6, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="BG"]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 8.0
-offset_bottom = 407.0
-color = Color(0.6, 0.6, 0.6, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="BG"]
-layout_mode = 0
-offset_top = 407.0
-offset_right = 621.0
-offset_bottom = 439.0
-color = Color(0.6, 0.6, 0.6, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="BG"]
+[node name="ColorRect5" type="ColorRect" parent="TopBar"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 7.0
 offset_right = 613.0
 offset_bottom = 40.16445
+mouse_filter = 1
 color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 
-[node name="Button" type="Button" parent="BG/ColorRect5"]
+[node name="close_button" type="Button" parent="TopBar/ColorRect5"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 570.0
@@ -81,22 +81,60 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_f3oiw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_j5agd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_f3oiw")
 
-[node name="TextureRect" type="TextureRect" parent="BG"]
+[node name="tab_button" type="Button" parent="TopBar/ColorRect5"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 8.0
-offset_right = 48.0
-offset_bottom = 40.0
+offset_left = 529.0
+offset_top = 2.0
+offset_right = 562.0
+offset_bottom = 31.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_evsuw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h0wjl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_deyi7")
+
+[node name="icon" type="TextureRect" parent="TopBar/ColorRect5"]
+texture_filter = 1
+layout_mode = 0
+offset_top = -7.0
+offset_right = 40.0
+offset_bottom = 33.0
 texture = ExtResource("3_evsuw")
 
-[node name="Label" type="Label" parent="BG"]
+[node name="title" type="Label" parent="TopBar/ColorRect5"]
 layout_mode = 0
-offset_left = 64.0
-offset_right = 222.0
-offset_bottom = 36.0
+offset_left = 55.0
+offset_top = -7.0
+offset_right = 213.0
+offset_bottom = 29.0
 theme_override_fonts/font = ExtResource("4_deyi7")
 theme_override_font_sizes/font_size = 20
 text = "Creatures"
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 68.0
+offset_right = 621.0
+offset_bottom = 441.0
+
+[node name="ColorRect3" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 611.0
+offset_right = 621.0
+offset_bottom = 367.0
+color = Color(0.6, 0.6, 0.6, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 373.0
+color = Color(0.6, 0.6, 0.6, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_top = 341.0
+offset_right = 621.0
+offset_bottom = 373.0
+color = Color(0.6, 0.6, 0.6, 1)
 
 [node name="Stalker" type="Button" parent="."]
 texture_filter = 1

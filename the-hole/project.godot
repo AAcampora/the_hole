@@ -15,6 +15,11 @@ run/main_scene="uid://ptloc8rdag8l"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1980
+window/size/viewport_height=1020
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
