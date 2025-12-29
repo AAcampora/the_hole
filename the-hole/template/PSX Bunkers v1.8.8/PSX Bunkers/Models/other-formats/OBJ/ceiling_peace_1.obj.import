@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://timh2u0l2so0"
+path="res://.godot/imported/ceiling_peace_1.obj-818f0facbfdfd4b3da1c228fba9ef4ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ceiling_peace_1.obj-818f0facbfdfd4b3da1c228fba9ef4ea.mesh"]
+
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Models/other-formats/OBJ/ceiling_peace_1.obj"
+dest_files=["res://.godot/imported/ceiling_peace_1.obj-818f0facbfdfd4b3da1c228fba9ef4ea.mesh", "res://.godot/imported/ceiling_peace_1.obj-818f0facbfdfd4b3da1c228fba9ef4ea.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://uxir0wc8akyu"]
+
+[ext_resource type="Texture2D" uid="uid://dwuubfqt0k5g5" path="res://textures/Color Maps/rock_hell_1.png" id="1_fdoaj"]
+
+[resource]
+albedo_texture = ExtResource("1_fdoaj")
+metallic_specular = 0.0
+texture_filter = 2

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameEvent" load_steps=2 format=3 uid="uid://dg3epurx04j5f"]
+
+[ext_resource type="Script" uid="uid://bfve8udts37ai" path="res://scripts/Events/GameEvent.gd" id="1_6ijfi"]
+
+[resource]
+script = ExtResource("1_6ijfi")
+hour_trigger = 1
+description = "base event.. Should not really do anything but.... Hi! How are you?"

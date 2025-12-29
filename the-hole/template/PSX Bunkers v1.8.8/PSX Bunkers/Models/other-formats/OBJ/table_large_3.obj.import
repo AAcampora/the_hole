@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bp371llmjp6cj"
+path="res://.godot/imported/table_large_3.obj-46052f5bea884e4fd38d85fe5f175b38.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table_large_3.obj-46052f5bea884e4fd38d85fe5f175b38.mesh"]
+
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Models/other-formats/OBJ/table_large_3.obj"
+dest_files=["res://.godot/imported/table_large_3.obj-46052f5bea884e4fd38d85fe5f175b38.mesh", "res://.godot/imported/table_large_3.obj-46052f5bea884e4fd38d85fe5f175b38.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

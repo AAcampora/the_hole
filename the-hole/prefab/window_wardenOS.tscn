@@ -1,0 +1,183 @@
+[gd_scene load_steps=18 format=3 uid="uid://dtr5njjcdfhxx"]
+
+[ext_resource type="Script" uid="uid://dvec1d7h4rsye" path="res://scripts/window.gd" id="1_6slrh"]
+[ext_resource type="Texture2D" uid="uid://b2g3l61yl1v32" path="res://textures/folder.png" id="2_8jpjj"]
+[ext_resource type="Texture2D" uid="uid://b6anwjolx8efr" path="res://textures/WardenOs/border_side.png" id="3_7je5h"]
+[ext_resource type="Texture2D" uid="uid://cihb26gtpgp33" path="res://textures/WardenOs/border_topbar_button_holder.png" id="4_hrog4"]
+[ext_resource type="Texture2D" uid="uid://bjkvhlf7jthpm" path="res://textures/wardenOS.png" id="5_6slrh"]
+[ext_resource type="FontFile" uid="uid://d0v37oaofacu0" path="res://fonts/aurora/aurora-24.ttf" id="5_7je5h"]
+[ext_resource type="Texture2D" uid="uid://bq4fsykpjjonh" path="res://textures/WardenOs/tab_button_warden_os.png" id="5_hjk1m"]
+[ext_resource type="Texture2D" uid="uid://bfbovoecdyxhy" path="res://textures/WardenOs/close_button_warden_os.png" id="6_3813f"]
+[ext_resource type="Texture2D" uid="uid://eu1mc0i3hs4k" path="res://textures/WardenOs/border_corner.png" id="7_ujw30"]
+[ext_resource type="Texture2D" uid="uid://ytu3axpecnv6" path="res://textures/WardenOs/border_middle.png" id="8_dkplo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jpjj"]
+bg_color = Color(0.026277252, 0.0520027, 0.09866888, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evsuw"]
+texture = ExtResource("5_hjk1m")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0wjl"]
+texture = ExtResource("5_hjk1m")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+modulate_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_deyi7"]
+texture = ExtResource("5_hjk1m")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3oiw"]
+texture = ExtResource("6_3813f")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5agd"]
+texture = ExtResource("6_3813f")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.32156864, 0.32156864, 0.32156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lqm6"]
+bg_color = Color(0.122993045, 0.11178663, 0.22525463, 1)
+
+[node name="window_creatures" type="Panel" node_paths=PackedStringArray("close_button", "minimise_button")]
+offset_left = 772.0
+offset_top = 170.0
+offset_right = 2042.5782
+offset_bottom = 847.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8jpjj")
+script = ExtResource("1_6slrh")
+close_button = NodePath("TopBar/border button holder/close_button")
+minimise_button = NodePath("TopBar/border button holder/tab_button")
+window_title = "Creatures"
+window_icon = ExtResource("2_8jpjj")
+
+[node name="TopBar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1271.0
+offset_bottom = 58.0
+scale = Vector2(1, 0.72396433)
+
+[node name="border side right" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 58.0139
+offset_right = 1271.0
+offset_bottom = 935.12897
+texture = ExtResource("3_7je5h")
+
+[node name="border side left" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 58.0139
+offset_right = 40.0
+offset_bottom = 935.12897
+texture = ExtResource("3_7je5h")
+
+[node name="border button holder" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1154.0
+offset_right = 1270.0
+offset_bottom = 58.0139
+texture = ExtResource("4_hrog4")
+
+[node name="tab_button" type="Button" parent="TopBar/border button holder"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 22.0
+offset_top = 15.194122
+offset_right = 52.0
+offset_bottom = 42.819794
+theme_override_styles/normal = SubResource("StyleBoxTexture_evsuw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h0wjl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_deyi7")
+
+[node name="close_button" type="Button" parent="TopBar/border button holder"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 70.0
+offset_top = 16.575409
+offset_right = 96.0
+offset_bottom = 41.438507
+theme_override_styles/normal = SubResource("StyleBoxTexture_f3oiw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j5agd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f3oiw")
+
+[node name="topbar_left" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 116.0
+offset_bottom = 58.013916
+texture = ExtResource("7_ujw30")
+
+[node name="topbarMiddle" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 58.0
+offset_right = 1166.0
+offset_bottom = 58.000008
+texture = ExtResource("8_dkplo")
+
+[node name="topbarMiddle" type="TextureRect" parent="TopBar/topbarMiddle"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -58.0
+offset_top = 877.11505
+offset_right = 1213.0
+offset_bottom = 935.11505
+texture = ExtResource("8_dkplo")
+
+[node name="title" type="Label" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 58.0
+offset_top = 6.90641
+offset_right = 216.0
+offset_bottom = 42.90641
+theme_override_fonts/font = ExtResource("5_7je5h")
+theme_override_font_sizes/font_size = 20
+text = "WardenOS"
+
+[node name="icon" type="TextureRect" parent="TopBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 21.0
+offset_top = 12.431542
+offset_right = 54.0
+offset_bottom = 45.812813
+texture = ExtResource("5_6slrh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 42.0
+offset_right = 218.0
+offset_bottom = 635.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3lqm6")
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 16.0
+offset_right = 166.0
+offset_bottom = 151.0

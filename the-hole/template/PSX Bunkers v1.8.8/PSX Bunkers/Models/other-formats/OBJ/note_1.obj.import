@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://g4ioaarny0bq"
+path="res://.godot/imported/note_1.obj-f1a0f0b37579c90e40797b5a73d41179.mesh"
+
+[deps]
+
+files=["res://.godot/imported/note_1.obj-f1a0f0b37579c90e40797b5a73d41179.mesh"]
+
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Models/other-formats/OBJ/note_1.obj"
+dest_files=["res://.godot/imported/note_1.obj-f1a0f0b37579c90e40797b5a73d41179.mesh", "res://.godot/imported/note_1.obj-f1a0f0b37579c90e40797b5a73d41179.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

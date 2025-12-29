@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://52decdnfuxeq"
+path="res://.godot/imported/metal_shelf_1.obj-c95ba1f24e44880deb35dde48ed9d0ec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/metal_shelf_1.obj-c95ba1f24e44880deb35dde48ed9d0ec.mesh"]
+
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Models/other-formats/OBJ/metal_shelf_1.obj"
+dest_files=["res://.godot/imported/metal_shelf_1.obj-c95ba1f24e44880deb35dde48ed9d0ec.mesh", "res://.godot/imported/metal_shelf_1.obj-c95ba1f24e44880deb35dde48ed9d0ec.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
