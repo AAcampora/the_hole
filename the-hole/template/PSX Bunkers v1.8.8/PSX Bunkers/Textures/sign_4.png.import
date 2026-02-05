@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp5hdp834ex42"
-path.s3tc="res://.godot/imported/sign_4.png-6615cabf0cf0ae991b8c783113d191eb.s3tc.ctex"
+path.s3tc="res://.godot/imported/sign_4.png-fef37432bf5bcebc32a9f87233d81aad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/textures/sign_4.png"
-dest_files=["res://.godot/imported/sign_4.png-6615cabf0cf0ae991b8c783113d191eb.s3tc.ctex"]
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Textures/sign_4.png"
+dest_files=["res://.godot/imported/sign_4.png-fef37432bf5bcebc32a9f87233d81aad.s3tc.ctex"]
 
 [params]
 

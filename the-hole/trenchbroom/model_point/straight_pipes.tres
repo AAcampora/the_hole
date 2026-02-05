@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDModelPointClass" format=3 uid="uid://h5f5dmp16won"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_wr7y2"]
+[ext_resource type="Script" uid="uid://ldfqjtq0br35" path="res://addons/func_godot/src/fgd/func_godot_fgd_model_point_class.gd" id="2_esupt"]
+[ext_resource type="PackedScene" uid="uid://baey0wu5qmnug" path="res://entities/straight_pipes.glb" id="2_nrfws"]
+
+[resource]
+script = ExtResource("2_esupt")
+target_map_editor = 1
+generate_size_property = true
+scene_file = ExtResource("2_nrfws")
+classname = "straightPipe"
+description = "its a series of tubes!"
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1),
+"model": "{\"path\": \"trenchbroom/models/straightPipe.glb\", \"scale\": 32.0 }",
+"size": AABB(-96, -32, -117, 96, 32, 118)
+})
+metadata/_custom_type_script = "uid://ldfqjtq0br35"

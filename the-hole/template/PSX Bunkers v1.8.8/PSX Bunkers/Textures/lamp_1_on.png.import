@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4aoxp6x1p0bm"
-path.s3tc="res://.godot/imported/lamp_1_on.png-8e9a4becd97311a1f0c807fe52d5b7d5.s3tc.ctex"
+path.s3tc="res://.godot/imported/lamp_1_on.png-4a7d025697daa71b44b1cbe2962b400f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/textures/lamp_1_on.png"
-dest_files=["res://.godot/imported/lamp_1_on.png-8e9a4becd97311a1f0c807fe52d5b7d5.s3tc.ctex"]
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Textures/lamp_1_on.png"
+dest_files=["res://.godot/imported/lamp_1_on.png-4a7d025697daa71b44b1cbe2962b400f.s3tc.ctex"]
 
 [params]
 

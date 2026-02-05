@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c18ilsbpgnasf"
-path.s3tc="res://.godot/imported/scifi_texture_1.png-6a9f17164c38cc3f904424ff92b9f9a5.s3tc.ctex"
+path.s3tc="res://.godot/imported/scifi_texture_1.png-d932f203e69bd3075becdd90e94913d6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/textures/scifi_texture_1.png"
-dest_files=["res://.godot/imported/scifi_texture_1.png-6a9f17164c38cc3f904424ff92b9f9a5.s3tc.ctex"]
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Textures/scifi_texture_1.png"
+dest_files=["res://.godot/imported/scifi_texture_1.png-d932f203e69bd3075becdd90e94913d6.s3tc.ctex"]
 
 [params]
 

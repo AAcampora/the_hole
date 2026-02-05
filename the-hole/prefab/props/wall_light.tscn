@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ct1arx74jsl5w"]
+
+[ext_resource type="PackedScene" uid="uid://b3jy3v8cijkyb" path="res://entities/light_test_2.glb" id="1_1heir"]
+
+[node name="Node3D" type="Node3D" unique_id=549942039]
+
+[node name="light_test_2" parent="." unique_id=1556572952 instance=ExtResource("1_1heir")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="light_test_2" unique_id=822975885]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.053092, -0.07639989, 0)
+light_color = Color(0.7313058, 0.5084987, 0, 1)
+light_energy = 3.669

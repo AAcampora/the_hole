@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy1d12v55vq27"
-path.s3tc="res://.godot/imported/door_handle_1.png-2b3e628693a577b94a18698c062f3ea9.s3tc.ctex"
+path.s3tc="res://.godot/imported/door_handle_1.png-922165611695519d21be5752bcbb298d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/textures/door_handle_1.png"
-dest_files=["res://.godot/imported/door_handle_1.png-2b3e628693a577b94a18698c062f3ea9.s3tc.ctex"]
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Textures/door_handle_1.png"
+dest_files=["res://.godot/imported/door_handle_1.png-922165611695519d21be5752bcbb298d.s3tc.ctex"]
 
 [params]
 

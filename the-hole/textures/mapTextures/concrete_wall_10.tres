@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c38snj0bf6qp8"]
+
+[ext_resource type="Texture2D" uid="uid://8bw73qtqgf2e" path="res://textures/mapTextures/concrete_wall_10.png" id="1_7eu66"]
+
+[resource]
+albedo_texture = ExtResource("1_7eu66")
+metallic_specular = 0.0
+texture_filter = 2

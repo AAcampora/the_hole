@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" format=3 uid="uid://cyphoo6s4aq1t"]
+
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_g3p3v"]
+[ext_resource type="Resource" uid="uid://b3opso11b14vo" path="res://trenchbroom/model_point/wall_light.tres" id="2_0rvc6"]
+[ext_resource type="Resource" uid="uid://h5f5dmp16won" path="res://trenchbroom/model_point/straight_pipes.tres" id="2_4qryg"]
+[ext_resource type="Script" uid="uid://drlmgulwbjwqu" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="3_4qryg"]
+
+[resource]
+script = ExtResource("3_4qryg")
+base_fgd_files = Array[Resource]([ExtResource("1_g3p3v")])
+entity_definitions = Array[Resource]([ExtResource("2_4qryg"), ExtResource("2_0rvc6")])
+metadata/_custom_type_script = "uid://drlmgulwbjwqu"

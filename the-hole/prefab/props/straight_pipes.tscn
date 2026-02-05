@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cubeyd8pjjhk8"]
+
+[ext_resource type="PackedScene" uid="uid://baey0wu5qmnug" path="res://entities/straight_pipes.glb" id="1_bj6kx"]
+
+[node name="StraightPipes" type="Node3D" unique_id=888076876]
+
+[node name="straight_pipes" parent="." unique_id=828700293 instance=ExtResource("1_bj6kx")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

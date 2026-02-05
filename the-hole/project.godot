@@ -8,11 +8,14 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="the_hole"
-run/main_scene="uid://ptloc8rdag8l"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -23,6 +26,11 @@ window/size/viewport_height=1020
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
+
+[func_godot]
+
+model_point_class_save_path="trenchbroom/models"
+default_map_settings="uid://bkhxcqsquw1yg"
 
 [rendering]
 

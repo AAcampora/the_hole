@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://3gtty2wk8aev"]
+[gd_scene format=3 uid="uid://3gtty2wk8aev"]
 
 [ext_resource type="Script" uid="uid://dvec1d7h4rsye" path="res://scripts/window.gd" id="1_mwf23"]
-[ext_resource type="Texture2D" uid="uid://dqrdf13558ewj" path="res://textures/close_button.png" id="2_h0wjl"]
-[ext_resource type="Texture2D" uid="uid://b2g3l61yl1v32" path="res://textures/folder.png" id="3_evsuw"]
-[ext_resource type="Texture2D" uid="uid://c43hllu7imwxy" path="res://textures/tab_button.png" id="3_h0wjl"]
+[ext_resource type="Texture2D" uid="uid://dqrdf13558ewj" path="res://textures/WardenOs/close_button.png" id="2_h0wjl"]
+[ext_resource type="Texture2D" uid="uid://b2g3l61yl1v32" path="res://textures/WardenOs/folder.png" id="3_evsuw"]
+[ext_resource type="Texture2D" uid="uid://c43hllu7imwxy" path="res://textures/WardenOs/tab_button.png" id="3_h0wjl"]
 [ext_resource type="FontFile" uid="uid://d0v37oaofacu0" path="res://fonts/aurora/aurora-24.ttf" id="4_deyi7"]
-[ext_resource type="Texture2D" uid="uid://d2yju2tacuar1" path="res://textures/files.png" id="5_hn8wl"]
+[ext_resource type="Texture2D" uid="uid://d2yju2tacuar1" path="res://textures/WardenOs/files.png" id="5_hn8wl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3oiw"]
 texture = ExtResource("2_h0wjl")

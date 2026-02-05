@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvc85pvaclckl"
-path.s3tc="res://.godot/imported/power_supply_1.png-aaf576cdb413537774be04ec11d4f56c.s3tc.ctex"
+path.s3tc="res://.godot/imported/power_supply_1.png-809a30dc9db03b269c03ff668ae0bd10.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/textures/power_supply_1.png"
-dest_files=["res://.godot/imported/power_supply_1.png-aaf576cdb413537774be04ec11d4f56c.s3tc.ctex"]
+source_file="res://template/PSX Bunkers v1.8.8/PSX Bunkers/Textures/power_supply_1.png"
+dest_files=["res://.godot/imported/power_supply_1.png-809a30dc9db03b269c03ff668ae0bd10.s3tc.ctex"]
 
 [params]
 
